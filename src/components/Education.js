@@ -8,11 +8,22 @@ export default class Education extends Component {
 
   
   render() {
-    return (
-      <div>
-        
-      </div>
-    );
+    const { display } = this.props;
+
+    if(display === 'form') {
+      return (
+        <div>
+          
+        </div>
+      );
+    }
+    else if(display === 'info') {
+      return (
+        <div>
+            
+        </div>
+      )
+    }
   }
 }
 
