@@ -6,28 +6,29 @@ export default class Info extends Component {
   constructor () {
     super();
 }
-
   
   render() {
     const { info, handler, display } = this.props;
     if(display === 'form') {
         return (
           <div>
-            <label htmlFor="name">Full Name:</label>
-            <input id="name" type="text" required value={info.name} onChange={handler}/>
-            <label htmlFor="email">Email:</label>
-            <input id="email" type="email" required value={info.email} onChange={handler}/>
-            <label htmlFor="phoneNumber">Phone Number:</label>
-            <input id="phoneNumber" type="text" required value={info.phoneNumber} onChange={handler}/>
+            <h2><u>Personal Information</u></h2>
+            <label htmlFor="name">Full Name: </label>
+            <input id="name" name="info" type="text" required value={info.name} onChange={handler}/>
+            <label htmlFor="email">Email: </label>
+            <input id="email" name="info" type="email" required value={info.email} onChange={handler}/>
+            <label htmlFor="phoneNumber">Phone Number: </label>
+            <input id="phoneNumber" name="info" type="text" pattern="\(?\d{3}\)?[ -]?\d{3}[ -]?\d{4}" required value={info.phoneNumber} onChange={handler}/>
           </div>
         );
     }
     else if(display === 'info') {
         return (
         <div>
-            <p>{info.name}</p>
-            <p>{info.email}</p>
-            <p>{info.phoneNumber}</p>
+            <h2><u>Personal Information</u></h2>
+            <p>Name: {info.name}</p>
+            <p>Email: {info.email}</p>
+            <p>Phone Number: {info.phoneNumber}</p>
         </div>
         )
     }
