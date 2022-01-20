@@ -36,3 +36,47 @@
     transform: rotate(360deg);
   }
 }
+
+/* cv relevant css */
+
+#cvFormContainer {
+  display: flex;
+  flex-direction: column;
+  border: solid black 1.5px;
+  margin: 5px;
+  padding: 5px;
+  
+}
+
+#cvForm {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 10px;
+  gap: 10px;
+}
+
+input[type="submit"] {
+  width: 100px;
+  margin-top: 20px;
+}
+
+#infoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: solid black 1.5px;
+  margin: 5px;
+  padding: 5px;
+}
+
+#info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 11.5px;
+}
+
+button {
+  width: 80px;
+  margin-top: 20px;
+}

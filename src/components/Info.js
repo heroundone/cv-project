@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import '../styles/Info.css';
 
 export default class Info extends Component {
 
@@ -13,12 +14,14 @@ export default class Info extends Component {
         return (
           <div>
             <h2><u>Personal Information</u></h2>
-            <label htmlFor="name">Full Name: </label>
-            <input id="name" name="info" type="text" required value={info.name} onChange={handler}/>
-            <label htmlFor="email">Email: </label>
-            <input id="email" name="info" type="email" required value={info.email} onChange={handler}/>
-            <label htmlFor="phoneNumber">Phone Number: </label>
-            <input id="phoneNumber" name="info" type="text" pattern="\(?\d{3}\)?[ -]?\d{3}[ -]?\d{4}" required value={info.phoneNumber} onChange={handler}/>
+            <div id="infoForm">
+              <label htmlFor="name">Full Name: </label>
+              <input id="name" name="info" type="text" required value={info.name} onChange={handler}/>
+              <label htmlFor="email">Email: </label>
+              <input id="email" name="info" type="email" required value={info.email} onChange={handler}/>
+              <label htmlFor="phoneNumber">Phone Number: </label>
+              <input id="phoneNumber" name="info" type="text" pattern="\(?\d{3}\)?[ -]?\d{3}[ -]?\d{4}" required value={info.phoneNumber} onChange={handler}/>
+            </div>
           </div>
         );
     }

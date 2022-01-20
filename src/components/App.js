@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import '../style/App.css';
+import '../styles/App.css';
 import Info from './Info';
 import Education from './Education';
 import Experience from './Experience';
@@ -88,8 +88,8 @@ export default class App extends Component {
     // if display is set to 'form' we want the form so we can edit, otherwise the info is displayed
     if(display === 'form') {
       return (
-        <div>
-          <form onSubmit={this.onSubmitCV}>
+        <div id='cvFormContainer'>
+          <form id="cvForm" onSubmit={this.onSubmitCV}>
             <Info display={display} info={this.state.info} handler={this.handleChange}/>
             <Education display={display} education={this.state.education} handler={this.handleChange}/>
             <Experience display={display} experience={this.state.experience} handler={this.handleChange}/>
@@ -100,11 +100,13 @@ export default class App extends Component {
     }
     else if(display === 'info') {
       return (
-        <div>
-          <Info display={display} info={this.state.info}/>
-          <Education display={display} education={this.state.education}/>
-          <Experience display={display} experience={this.state.experience}/>
-          <button type="click" onClick={this.onClickEdit}>Edit CV</button>
+        <div id="infoContainer">
+          <div id="info">
+            <Info display={display} info={this.state.info}/>
+            <Education display={display} education={this.state.education}/>
+            <Experience display={display} experience={this.state.experience}/>
+            <button type="click" onClick={this.onClickEdit}>Edit CV</button>
+          </div>
         </div>
       )
     }
